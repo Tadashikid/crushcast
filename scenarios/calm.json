@@ -1,0 +1,6 @@
+{
+  "durationMin": 60,
+  "arrivals": { "metro": [[0, 80]], "road": [[0, 80]], "bus": [[0, 50]] },
+  "events": [],
+  "label": "Calm baseline (synthetic) — crises come from the buttons"
+}

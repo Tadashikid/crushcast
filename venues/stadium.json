@@ -1,0 +1,27 @@
+{
+  "name": "Stadium X (synthetic)",
+  "cellSize": 0.5,
+  "width": 320,
+  "height": 200,
+  "walls": [
+    [[0, 0], [319, 0], [319, 199], [0, 199], [0, 0]],
+    [[0, 60], [319, 60]]
+  ],
+  "gates": [
+    { "id": "G1", "line": [[50, 60], [58, 60]], "capacityPerMin": 90, "open": true },
+    { "id": "G3", "line": [[150, 60], [158, 60]], "capacityPerMin": 90, "open": true },
+    { "id": "G5", "line": [[230, 60], [238, 60]], "capacityPerMin": 90, "open": true },
+    { "id": "G9", "line": [[185, 60], [193, 60]], "capacityPerMin": 120, "open": false, "reserve": true }
+  ],
+  "sources": [
+    { "id": "metro", "area": [[140, 180], [170, 195]], "label": "Metro exit" },
+    { "id": "bus", "area": [[2, 120], [20, 150]], "label": "Bus stand" },
+    { "id": "road", "area": [[300, 150], [318, 190]], "label": "Main road" }
+  ],
+  "zones": [
+    { "id": "gate1-front", "area": [[40, 61], [68, 80]], "label": "Gate 1 approach" },
+    { "id": "gate3-front", "area": [[140, 61], [168, 80]], "label": "Gate 3 approach" },
+    { "id": "gate5-front", "area": [[220, 61], [248, 80]], "label": "Gate 5 approach" },
+    { "id": "gate9-front", "area": [[175, 61], [203, 80]], "label": "Gate 9 approach" }
+  ]
+}

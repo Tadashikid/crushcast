@@ -1,0 +1,6 @@
+{
+  "durationMin": 30,
+  "arrivals": { "metro": [[0, 80], [10, 100]], "road": [[0, 80]], "bus": [[0, 50]] },
+  "events": [{ "atMin": 8, "type": "announcement", "source": "metro", "multiplier": 3, "forMin": 5 }],
+  "label": "Illustrative scenario"
+}
