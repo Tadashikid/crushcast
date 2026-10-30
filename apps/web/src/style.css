@@ -1,0 +1,64 @@
+/* Minimal shared styles. Swap these variables (or the whole file) when the real UI lands. */
+:root {
+  --bg: #fafaf8;
+  --fg: #1d1d1f;
+  --muted: #6b6b70;
+  --card: #ffffff;
+  --line: #e2e1dc;
+  --accent: #2463eb;
+  --green: #2ea043;
+  --amber: #eba014;
+  --red: #d72828;
+  font-family: system-ui, sans-serif;
+  color: var(--fg);
+  background: var(--bg);
+}
+body { margin: 0; }
+button { font: inherit; padding: 4px 10px; margin: 2px; border: 1px solid var(--line); border-radius: 6px; background: var(--card); cursor: pointer; }
+button:disabled { opacity: 0.5; }
+button.on { border-color: var(--accent); color: var(--accent); }
+.muted { color: var(--muted); font-size: 0.9em; }
+
+/* control room */
+.layout { display: grid; grid-template-columns: 65fr 35fr; gap: 12px; padding: 12px; height: 100vh; box-sizing: border-box; }
+.left, .panel { overflow: auto; }
+.map { width: 100%; height: auto; border: 1px solid var(--line); border-radius: 8px; background: #f4f3ef; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 8px 12px; margin-bottom: 10px; }
+.card h3 { margin: 4px 0 8px; font-size: 1em; display: flex; justify-content: space-between; align-items: center; }
+.card table { width: 100%; font-size: 0.95em; }
+.banner { padding: 12px; border-radius: 8px; margin-bottom: 10px; font-size: 1.25em; font-weight: 600; color: #fff; }
+.banner.green { background: var(--green); }
+.banner.amber { background: var(--amber); }
+.banner.red { background: var(--red); }
+.plan { border: 1px solid var(--line); border-radius: 6px; padding: 8px; margin: 6px 0; cursor: pointer; }
+.plan.selected { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
+.plan-title { font-weight: 600; }
+.apply { background: var(--accent); color: #fff; border-color: var(--accent); margin-top: 6px; }
+.futures { margin-top: 10px; }
+.minis { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.minis figure { margin: 0; }
+.minis canvas { width: 100%; height: auto; border: 1px solid var(--line); border-radius: 6px; }
+.minis figcaption { font-weight: 600; margin-bottom: 4px; }
+.outcome { font-weight: 600; }
+.outcome.red { color: var(--red); }
+.outcome.green { color: var(--green); }
+.scrub { display: flex; gap: 8px; align-items: center; }
+.scrub input { flex: 1; }
+.join { display: flex; gap: 12px; align-items: center; }
+.join code { word-break: break-all; }
+.legend .sw { display: inline-block; width: 12px; height: 12px; border-radius: 2px; vertical-align: middle; }
+.sw.green { background: var(--green); } .sw.amber { background: var(--amber); } .sw.red { background: var(--red); }
+@media (max-width: 1100px) { .layout { grid-template-columns: 1fr; height: auto; } }
+
+/* phone page */
+.phone { max-width: 480px; margin: 0 auto; padding: 16px; text-align: center; }
+.phone h1 { font-size: 1.4em; }
+.phone .grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin: 10px 0; }
+.phone .grid button { font-size: 1.6em; padding: 6px 12px; }
+.phone .grid button.on { border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent); }
+.phone .big { display: block; width: 100%; font-size: 1.4em; padding: 18px; margin: 14px 0; background: var(--accent); color: #fff; border: none; border-radius: 12px; }
+.phone .arrow { font-size: 7em; line-height: 1; }
+.phone .gate { font-size: 2em; font-weight: 700; }
+.phone .status { padding: 10px; border-radius: 8px; color: #fff; margin: 10px 0; }
+.phone .status.green { background: var(--green); } .phone .status.amber { background: var(--amber); } .phone .status.red { background: var(--red); }
+.phone .crises button { width: 100%; padding: 10px; margin: 4px 0; }
